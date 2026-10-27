@@ -63,71 +63,305 @@
   </header>
 
   <!-- ========================================================================
-       2. HERO SECTION (Introducción)
+       2. HERO SLIDER SECTION (Líneas & Productos Destacados)
        ======================================================================== -->
-  <section class="hero-section" id="inicio">
-    <div class="container hero-grid">
-      <div class="hero-text-content">
-        <div class="hero-badge-pill">
-          <span class="pulse-dot"></span>
-          Grado Farmacéutico Certificado &bull; Stock Disponible
-        </div>
+  <section class="hero-section hero-slider-section" id="inicio">
+    <div class="hero-slider" id="hero-slider">
+      <!-- Slides Container -->
+      <div class="hero-slides-wrapper" id="hero-slides-wrapper">
 
-        <h1 class="hero-title">
-          LLEVA TU RENDIMIENTO AL <span class="hero-title-highlight">INFINITO</span> CON <span style="color: var(--brand-blue);">INFINITY CHIMIE</span>
-        </h1>
-
-        <p class="hero-subtitle">
-          Distribuidora autorizada de <strong>suplementos farmacéuticos de élite</strong> para atletas y culturistas. Pureza química verificada y <strong>envíos garantizados y discretos a toda Colombia 🇨🇴</strong>.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="#catalogo" class="btn-primary">
-            VER CATÁLOGO POR CATEGORÍAS
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-            </svg>
-          </a>
-
-          <a href="https://wa.me/573124916138?text=Hola%20Infinity%20Chimie,%20deseo%20asesor%C3%ADa%20personalizada%20para%20mi%20ciclo%20de%20suplementaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="btn-secondary-wa">
-            Asesoría por WhatsApp 📲
-          </a>
-        </div>
-
-        <div class="hero-features-list">
-          <div class="hero-feature-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            100% Original Sellado
-          </div>
-          <div class="hero-feature-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            Envíos Nacionales 24-48h
-          </div>
-          <div class="hero-feature-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            Atención Médica-Deportiva
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero Visual Showcase -->
-      <div class="hero-visual-card">
-        <div class="hero-visual-frame">
-          <img src="assets/hero_athlete.jpg" alt="Atleta de alto rendimiento con suplementos Infinity Pharmaceuticals">
-          
-          <div class="hero-badge-overlay">
-            <div class="hero-badge-left">
-              <div class="hero-badge-logo">
-                <img src="assets/logo.png" alt="Infinity Logo">
+        <!-- SLIDE 1: LÍNEA SARMS -->
+        <div class="hero-slide active" data-slide="0">
+          <div class="container hero-grid">
+            <div class="hero-text-content">
+              <div class="hero-badge-pill">
+                <span class="pulse-dot"></span>
+                Línea Destacada &bull; SARMs de Élite 🇨🇴
               </div>
-              <div>
-                <div class="hero-badge-text-title">Infinity Pharmaceuticals</div>
-                <div class="hero-badge-text-sub">Línea Oficial para Atletas</div>
+
+              <h1 class="hero-title">
+                CONSTRUYE MASA MAGRA Y <span class="hero-title-highlight">FUERZA PURA</span> CON SARMS
+              </h1>
+
+              <p class="hero-subtitle">
+                Moduladores selectivos de grado farmacéutico (<strong>YK-11, RAD-140, Ligandrol, Ostarine, MK-677</strong>). Máxima biodisponibilidad y rocosidad muscular con pureza certificada del 99.8%.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#catalogo" class="btn-primary hero-filter-trigger" data-target-category="sarms">
+                  VER LÍNEA SARMS
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                  </svg>
+                </a>
+
+                <a href="https://wa.me/573124916138?text=Hola%20Infinity%20Chimie,%20deseo%20asesor%C3%ADa%20personalizada%20sobre%20la%20L%C3%ADnea%20SARMs" target="_blank" rel="noopener noreferrer" class="btn-secondary-wa">
+                  Pedir SARMs por WhatsApp 📲
+                </a>
+              </div>
+
+              <div class="hero-features-list">
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  100% Original Sellado
+                </div>
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Envíos Nacionales 24-48h
+                </div>
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Pureza 99.8% Verificada
+                </div>
               </div>
             </div>
-            <div class="hero-badge-flag" title="Envíos a toda Colombia">🇨🇴</div>
+
+            <div class="hero-visual-card">
+              <div class="hero-banner-frame">
+                <img src="assets/banner_sarms.jpg" alt="Promoción Línea SARMs - Infinity Pharmaceuticals" class="hero-banner-img">
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- SLIDE 2: LÍNEA INYECTABLES -->
+        <div class="hero-slide" data-slide="1">
+          <div class="container hero-grid">
+            <div class="hero-text-content">
+              <div class="hero-badge-pill" style="color: #1D4ED8; border-color: rgba(29, 78, 216, 0.3); background: #EFF6FF;">
+                <span class="pulse-dot" style="background: #1D4ED8; box-shadow: 0 0 10px #1D4ED8;"></span>
+                Grado USP &bull; Inyectables de Potencia 💉
+              </div>
+
+              <h1 class="hero-title">
+                POTENCIA FARMACÉUTICA PARA <span class="hero-title-highlight">CICLOS DE ÉLITE</span>
+              </h1>
+
+              <p class="hero-subtitle">
+                Soluciones oleosas en viales estériles certificados (<strong>Testosterona Enantato, Trembolona, Sustanon, Boldenona</strong>). Alta concentración exacta por ml para ganancias sólidas de volumen y fuerza.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#catalogo" class="btn-primary hero-filter-trigger" data-target-category="inyectables">
+                  VER INYECTABLES
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                  </svg>
+                </a>
+
+                <a href="https://wa.me/573124916138?text=Hola%20Infinity%20Chimie,%20deseo%20asesor%C3%ADa%20sobre%20la%20L%C3%ADnea%20de%20Inyectables" target="_blank" rel="noopener noreferrer" class="btn-secondary-wa">
+                  Consultar Inyectables 📲
+                </a>
+              </div>
+
+              <div class="hero-features-list">
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Viales Estériles Sellados
+                </div>
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Máxima Biodisponibilidad
+                </div>
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Despachos Discretos
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-visual-card">
+              <div class="hero-banner-frame">
+                <img src="assets/banner_injectable.jpg" alt="Promoción Línea Inyectables - Infinity Pharmaceuticals" class="hero-banner-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3: LÍNEA ORALES -->
+        <div class="hero-slide" data-slide="2">
+          <div class="container hero-grid">
+            <div class="hero-text-content">
+              <div class="hero-badge-pill" style="color: #B45309; border-color: rgba(217, 119, 6, 0.3); background: #FEF3C7;">
+                <span class="pulse-dot" style="background: #D97706; box-shadow: 0 0 10px #D97706;"></span>
+                Acción Rápida &bull; Anabólicos Orales 💊
+              </div>
+
+              <h1 class="hero-title">
+                ROCOSIDAD Y DENSIDAD <span class="hero-title-highlight">SIN RETENCIÓN</span> DE LÍQUIDOS
+              </h1>
+
+              <p class="hero-subtitle">
+                Tabletas de precisión química (<strong>Anavar Oxandrolona, Winstrol Estanozolol, Dianabol, Proviron</strong>). Explosión de fuerza, congestión muscular pura y estética de competición.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#catalogo" class="btn-primary hero-filter-trigger" data-target-category="orales">
+                  VER LÍNEA ORALES
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                  </svg>
+                </a>
+
+                <a href="https://wa.me/573124916138?text=Hola%20Infinity%20Chimie,%20deseo%20pedir%20Anavar%20o%20productos%20Orales" target="_blank" rel="noopener noreferrer" class="btn-secondary-wa">
+                  Pedir Orales en WhatsApp 📲
+                </a>
+              </div>
+
+              <div class="hero-features-list">
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  100 Tabletas Grado Élite
+                </div>
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Definición Magra Real
+                </div>
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Entrega Rápida Colombia
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-visual-card">
+              <div class="hero-banner-frame">
+                <img src="assets/banner_oral.jpg" alt="Promoción Línea Orales - Infinity Pharmaceuticals" class="hero-banner-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 4: LÍNEA POST CICLO (PCT) -->
+        <div class="hero-slide" data-slide="3">
+          <div class="container hero-grid">
+            <div class="hero-text-content">
+              <div class="hero-badge-pill" style="color: #15803D; border-color: rgba(22, 163, 74, 0.3); background: #ECFDF5;">
+                <span class="pulse-dot" style="background: #16A34A; box-shadow: 0 0 10px #16A34A;"></span>
+                Salud &amp; Preservación &bull; Terapia Post Ciclo 🛡️
+              </div>
+
+              <h1 class="hero-title">
+                PROTEGE TU EJE HORMONAL Y <span class="hero-title-highlight">PRESERVA CADA GANANCIA</span>
+              </h1>
+
+              <p class="hero-subtitle">
+                Fórmulas esenciales de protección y reactivación (<strong>Tamoxifeno, Clomifeno, Anastrozol, HCG</strong>). Reestablece tus valores fisiológicos naturales y mantén el músculo construido.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#catalogo" class="btn-primary hero-filter-trigger" data-target-category="pct">
+                  VER POST CICLO (PCT)
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                  </svg>
+                </a>
+
+                <a href="https://wa.me/573124916138?text=Hola%20Infinity%20Chimie,%20necesito%20asesor%C3%ADa%20para%20un%20Post%20Ciclo%20(PCT)" target="_blank" rel="noopener noreferrer" class="btn-secondary-wa">
+                  Asesoría Médica Deportiva 📲
+                </a>
+              </div>
+
+              <div class="hero-features-list">
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Reinicio Seguro del Eje
+                </div>
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Control Anti-Estrógeno
+                </div>
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Máxima Seguridad
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-visual-card">
+              <div class="hero-banner-frame">
+                <img src="assets/banner_pct.jpg" alt="Promoción Línea Post Ciclo PCT - Infinity Pharmaceuticals" class="hero-banner-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 5: LÍNEA QUEMADORES & DEFINICIÓN -->
+        <div class="hero-slide" data-slide="4">
+          <div class="container hero-grid">
+            <div class="hero-text-content">
+              <div class="hero-badge-pill" style="color: #DC2626; border-color: rgba(220, 38, 38, 0.3); background: #FEF2F2;">
+                <span class="pulse-dot" style="background: #DC2626; box-shadow: 0 0 10px #DC2626;"></span>
+                Termogénesis &bull; Definición Extrema 🔥
+              </div>
+
+              <h1 class="hero-title">
+                ACELERA TU METABOLISMO Y <span class="hero-title-highlight">DESTRUYE LA GRASA</span> REBELDE
+              </h1>
+
+              <p class="hero-subtitle">
+                Activadores metabólicos de precisión (<strong>Clembuterol 40mcg, T3 Cytomel, Cardarine</strong>). Quema de tejido adiposo acelerada con preservación intacta de la masa magra.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#catalogo" class="btn-primary hero-filter-trigger" data-target-category="fatburn">
+                  VER QUEMADORES
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                  </svg>
+                </a>
+
+                <a href="https://wa.me/573124916138?text=Hola%20Infinity%20Chimie,%20deseo%20informaci%C3%B3n%20sobre%20Clembuterol%20o%20Quemadores" target="_blank" rel="noopener noreferrer" class="btn-secondary-wa">
+                  Pedir por WhatsApp 📲
+                </a>
+              </div>
+
+              <div class="hero-features-list">
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Potente Termogénico
+                </div>
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Energía &amp; Resistencia
+                </div>
+                <div class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Vascularización Magra
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-visual-card">
+              <div class="hero-banner-frame">
+                <img src="assets/banner_fatburn.jpg" alt="Promoción Línea Quemadores - Infinity Pharmaceuticals" class="hero-banner-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slider Arrows Navigation -->
+      <button class="slider-arrow prev" id="slider-prev" aria-label="Línea anterior">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+
+      <button class="slider-arrow next" id="slider-next" aria-label="Siguiente línea">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+
+      <!-- Slider Indicators (Dots) -->
+      <div class="slider-dots" id="slider-dots">
+        <button class="slider-dot active" data-index="0" aria-label="Ver Línea SARMs"></button>
+        <button class="slider-dot" data-index="1" aria-label="Ver Línea Inyectables"></button>
+        <button class="slider-dot" data-index="2" aria-label="Ver Línea Orales"></button>
+        <button class="slider-dot" data-index="3" aria-label="Ver Línea Post Ciclo"></button>
+        <button class="slider-dot" data-index="4" aria-label="Ver Línea Quemadores"></button>
       </div>
     </div>
   </section>

@@ -405,6 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCategoryBadges();
   renderProducts();
   setupEventListeners();
+  setupHeroSlider();
   setupFAQ();
   setupMobileMenu();
 });
@@ -625,4 +626,125 @@ function setupMobileMenu() {
       menu.classList.remove("open");
     });
   });
+}
+
+// ============================================================================
+// HERO SLIDER CONTROLLER
+// ============================================================================
+function setupHeroSlider() {
+  const slides = document.querySelectorAll(".hero-slide");
+  const dots = document.querySelectorAll(".slider-dot");
+  const prevBtn = document.getElementById("slider-prev");
+  const nextBtn = document.getElementById("slider-next");
+  const slider = document.getElementById("hero-slider");
+
+  if (!slides.length) return;
+
+  let currentSlide = 0;
+  let autoPlayTimer = null;
+  const slideInterval = 5500;
+
+  function showSlide(index) {
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+    currentSlide = index;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === currentSlide);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentSlide);
+    });
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    autoPlayTimer = setInterval(nextSlide, slideInterval);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      startAutoPlay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      startAutoPlay();
+    });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", (e) => {
+      const idx = parseInt(e.target.getAttribute("data-index"), 10);
+      if (!isNaN(idx)) {
+        showSlide(idx);
+        startAutoPlay();
+      }
+    });
+  });
+
+  if (slider) {
+    slider.addEventListener("mouseenter", stopAutoPlay);
+    slider.addEventListener("mouseleave", startAutoPlay);
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slider.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    slider.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+        startAutoPlay();
+      }
+    }
+  }
+
+  // Filter triggers inside slides ("VER LÍNEA SARMS", "VER INYECTABLES", etc.)
+  const filterTriggers = document.querySelectorAll(".hero-filter-trigger");
+  filterTriggers.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetCat = btn.getAttribute("data-target-category");
+      if (targetCat) {
+        const catBtn = document.querySelector(`.filter-btn[data-category="${targetCat}"]`);
+        if (catBtn) {
+          catBtn.click();
+        }
+      }
+    });
+  });
+
+  startAutoPlay();
 }
