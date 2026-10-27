@@ -1,0 +1,40 @@
+name: Deploy a HostGator (CI/CD)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Permite disparar el despliegue manualmente desde la pestaña Actions en GitHub
+
+jobs:
+  build-and-deploy:
+    name: Compilar y Desplegar vía FTP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 1. Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: ⚙️ 2. Configurar entorno Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 3. Instalar dependencias limpias
+        run: npm ci
+
+      - name: 🔨 4. Compilar proyecto para producción
+        run: npm run build
+
+      - name: 🚀 5. Sincronizar archivos en HostGator vía FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          local-dir: ./dist/
+          server-dir: ${{ secrets.FTP_SERVER_DIR || '/public_html/' }}
+          dangerous-clean-slate: false
