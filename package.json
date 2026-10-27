@@ -1,0 +1,17 @@
+{
+  "name": "infinity-chimie",
+  "version": "1.0.0",
+  "description": "Infinity Chimie - Suplementos Farmacéuticos de Élite en Colombia",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite --open",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "node server.js"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}
